@@ -24,6 +24,7 @@ pushLoan = function(loan) {
   var url;
   SEEN.push(loan.id);
   url = "https://www.lendingclub.com/browse/loanDetail.action?loan_id=" + loan.id;
+  console.log('Description Found!', url);
   return pusher.link(process.env.PUSHBULLET_ACCOUNT, 'Description Found!', url);
 };
 
