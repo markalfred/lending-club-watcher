@@ -20,6 +20,14 @@ Push notify me when a loan with a description is found.
 
 ## Usage
 
+Start a process that checks every 10 minutes
+
 ```
 npm start
+```
+
+Run the process once
+
+```
+npm run once
 ```

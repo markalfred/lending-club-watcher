@@ -13,7 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ."
+    "once": "node .",
+    "start": "node . --keep-alive"
   },
   "repository": {
     "type": "git",

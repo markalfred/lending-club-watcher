@@ -55,6 +55,8 @@ makeRequest = function() {
 
 console.log('Starting...');
 
-setInterval(makeRequest, 1000 * 60 * 10);
+if (process.argv.indexOf('--keep-alive') !== -1) {
+  setInterval(makeRequest, 1000 * 60 * 10);
+}
 
 makeRequest();

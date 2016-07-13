@@ -37,5 +37,5 @@ makeRequest = ->
     error: handleError
 
 console.log 'Starting...'
-setInterval makeRequest, 1000 * 60 * 10
+setInterval makeRequest, 1000 * 60 * 10 unless process.argv.indexOf('--keep-alive') is -1
 makeRequest()
