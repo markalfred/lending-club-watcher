@@ -31,3 +31,24 @@ Run the process once
 ```
 npm run once
 ```
+
+## Usage with AWS Lambda
+
+Install and set up AWS CLI
+
+```
+brew install awscli
+aws configure
+```
+
+Create a Lambda function named "LendingClubWatcher"
+
+```
+aws lambda create-function --function-name LendingClubWatcher
+```
+
+Deploy
+
+```
+npm run deploy
+```
