@@ -30,11 +30,13 @@ function pushLoan(loan) {
 }
 
 function handleGoodLoans(arg) {
-  var loans
-  loans = arg.loans
-  return _(loans).reject({
-    desc: null
-  }).reject(loanSeen).each(pushLoan).run()
+  var good = _(arg.loans).reject({ desc: null }).reject(loanSeen).value()
+  var msg = 'Loans found: ' + good.length
+
+  console.log('Script ran!', msg)
+  pusher.note(PUSHBULLET_ACCOUNT, 'Script ran!', msg)
+
+  _.each(good, pushLoan)
 }
 
 function makeRequest() {
