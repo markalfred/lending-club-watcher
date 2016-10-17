@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "prebuild": "rm build.zip",
+    "prebuild": "rm -f build.zip",
     "build": "zip -r build.zip index.js node_modules",
     "predeploy": "npm run build",
     "deploy": "aws lambda update-function-code --function-name LendingClubWatcher --zip-file fileb://./build.zip",
